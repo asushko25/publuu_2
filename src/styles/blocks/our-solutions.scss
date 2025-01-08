@@ -1,0 +1,63 @@
+@import "../utils/variables.scss";
+@import "../utils/mixin.scss";
+
+.our-solutions {
+  padding: 0 15px;
+
+  &__container {
+    max-width: 1287px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-family: $second-font;
+    font-size: 85px;
+    font-weight: 900;
+    line-height: 95px;
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 40px;
+
+    @media (max-width: #{$desktop-min-width - 1px}) {
+      font-size: 60px;
+      line-height: 80px;
+    margin-top: 40px;
+
+    }
+
+    @media (max-width: #{$tablet-min-width - 1px}) {
+      font-size: 35px;
+      line-height: 50px;
+      margin-top: 40px;
+    }
+  }
+
+  &__discription {
+    font-family: $main-font;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 38px;
+    text-align: center;
+    margin-bottom: 60px;
+
+    @media (max-width: #{$desktop-min-width - 1px}) {
+      font-size: 24px;
+      line-height: 38px;
+    }
+
+    @media (max-width: #{$tablet-min-width - 1px}) {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+  &__iframe {
+    max-width: 1290px;
+    margin: 0 auto;
+    padding-bottom: 120px;
+  }
+
+  &__iframe-item {
+    border-radius: 10px;
+  }
+}

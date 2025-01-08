@@ -1,0 +1,155 @@
+@import "../utils/variables.scss";
+@import "../utils/mixin.scss";
+
+.footer {
+  background-color: $main-text-color;
+
+  &-wrapper {
+    max-width: 1290px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: #{$desktop-min-width - 1px}) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      gap: 30px;
+    }
+
+    @media (max-width: #{$tablet-min-width - 1px}) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      gap: 30px;
+    }
+  }
+
+  &-column {
+    &__title {
+      display: flex;
+      align-items: center;
+      color: $fourth-text-color;
+      font-family: $second-font;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 30px;
+      padding-top: 60px;
+      padding-bottom: 10px;
+
+      &--hidden {
+        visibility: hidden;
+      }
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-family: $second-font;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 30px;
+      color: $third-text-color;
+      text-decoration: none;
+
+      &:hover {
+        color: $second-text-color;
+      }
+    }
+  }
+
+  &-information {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 60px;
+
+    @media (max-width: ($desktop-min-width - 1)) {
+    }
+
+    @media (max-width: ($tablet-min-width - 1)) {
+      flex-direction: column;
+    }
+
+    &__text {
+      color: $third-text-color;
+      font-family: $second-font;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 30px;
+      padding: 3px 0;
+
+      @media (max-width: ($desktop-min-width - 1)) {
+      }
+
+      @media (max-width: ($tablet-min-width - 1)) {
+        text-align: center;
+      }
+
+      &:hover {
+        color: $second-text-color;
+      }
+
+      &-second {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    &__icon {
+      color: $third-text-color;
+    }
+
+    &__laguage {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    &__list {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    &__social {
+      color: $third-text-color;
+      font-family: $second-font;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 30px;
+      text-decoration: none;
+
+      &:hover {
+        color: $second-text-color;
+      }
+    }
+
+    &__follow {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    &__info {
+      margin-bottom: 20px;
+    }
+
+    &-list__icon,
+    &__icons {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.footer-column-hidden {
+  @media (max-width: #{$tablet-min-width - 1px}) {
+    display: none;
+  }
+}

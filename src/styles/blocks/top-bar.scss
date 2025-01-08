@@ -1,0 +1,122 @@
+@import "../utils/variables.scss";
+@import "../utils/mixin.scss";
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  max-width: 1291px;
+  margin: 0 auto;
+
+  @media (max-width: ($desktop-min-width - 1)) {
+    gap: 110px;
+    justify-content: space-between;
+    padding: 20 15px;
+    display: block;
+  }
+
+  @media (max-width: ($tablet-min-width - 1)) {
+    gap: 110px;
+    justify-content: space-between;
+  }
+}
+
+.top-bar__logo {
+  display: flex;
+  flex: 150px 49px;
+  padding-right: 60px;
+}
+
+.top-bar__list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.top-bar__link {
+  text-decoration: none;
+  text-decoration: none;
+  font-family: $main-font;
+  color: $main-text-color;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $second-text-color;
+  }
+}
+
+.top-bar__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: $mobile-max-width) {
+    gap: 110px;
+    justify-content: space-between;
+  }
+}
+
+.top-bar__links {
+  display: flex;
+  gap: 10px;
+}
+
+.top-bar__right-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.try-button {
+  border-radius: 50px;
+  background-color: $main-text-color;
+  width: 121px;
+  height: 39px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+  color: #fff;
+
+  &:hover {
+    background-color: $fourth-text-color;
+    color: $main-text-color;
+    border: 2px solid $main-text-color;
+  }
+}
+
+.login-button {
+  border-radius: 50px;
+  background-color: $fourth-text-color;
+  width: 121px;
+  height: 39px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid $main-text-color;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: $main-text-color;
+
+  &:hover {
+    background-color: $main-text-color;
+    color: $fourth-text-color;
+    border: 2px solid $main-text-color;
+  }
+}
+
+.top-bar__button {
+  text-decoration: none;
+  font-family: $main-font;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}

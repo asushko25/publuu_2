@@ -1,0 +1,126 @@
+@import "../utils/variables.scss";
+@import "../utils/mixin.scss";
+
+.drives-us {
+  background-color: #f2f2f2;
+
+  &__photo img {
+    width: 630px;
+    height: auto;
+    border-radius: 10px;
+
+    @media (max-width: #{$desktop-min-width - 1px}) {
+    }
+
+    @media (max-width: #{$tablet-min-width - 1px}) {
+      width: 100%;
+    }
+  }
+
+  &__photo {
+    margin: 120px 0;
+
+    @media (max-width: #{$desktop-min-width - 1px}) {
+      margin-top: 50px;
+    }
+
+    @media (max-width: #{$tablet-min-width - 1px}) {
+      margin: 0px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__container {
+    max-width: 1287px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    @media (max-width: #{$desktop-min-width - 1px}) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (max-width: #{$tablet-min-width - 1px}) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    @media (max-width: #{$desktop-min-width - 1px}) {
+      text-align: center;
+    }
+
+    @media (max-width: #{$tablet-min-width - 1px}) {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-family: $second-font;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 95px;
+    text-align: left;
+    color: $main-text-color;
+    padding-bottom: 60px;
+
+    @media (max-width: #{$desktop-min-width - 1px}) {
+      text-align: center;
+      padding-top: 30px;
+      padding-bottom: 0px;
+      font-size: 60px;
+      line-height: 75px;
+    }
+
+    @media (max-width: #{$tablet-min-width - 1px}) {
+      text-align: center;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      font-size: 35px;
+      line-height: 60px;
+    }
+  }
+
+  &__discription {
+    font-family: $main-font;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 31px;
+    text-align: left;
+  }
+
+  &__line {
+    width: 3px;
+    height: 301px;
+    background: linear-gradient(to bottom, #c0c0c0 0%, #c0c0c0 50%);
+    margin: 0 auto;
+    display: flex;
+    padding-left: 2px;
+  }
+
+  &__discription-bold {
+    font-weight: 500;
+  }
+
+
+  &__discription-item {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out; 
+  }
+  
+  &__discription-item.show {
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+}

@@ -1,0 +1,115 @@
+@import "../utils/variables.scss";
+@import "../utils/mixin.scss";
+
+.by-numbers {
+  max-width: 1290px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  &__title {
+    display: flex;
+    font-family: $second-font;
+    font-style: normal;
+    align-items: center;
+    justify-content: center;
+    color: $main-text-color;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 95px;
+    margin-bottom: 80px;
+    padding-top: 120px;
+
+    @media (max-width: #{$desktop-min-width - 1px}) {
+      font-size: 50px;
+      text-align: center;
+      line-height: 70px;
+    }
+
+    @media (max-width: #{$tablet-min-width - 1px}) {
+      font-size: 42px;
+      text-align: center;
+      line-height: 55px;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    max-width: 1290px;
+    margin-bottom: 120px;
+    gap: 30px;
+    margin: 0 auto 120px;
+
+    @media (max-width: #{$desktop-min-width - 1px}) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: #{$tablet-min-width - 1px}) {
+      grid-template-columns: 1fr; 
+    }
+  }
+
+  &__card {
+    border-radius: 10px;
+    border: 1px solid #c0c0c0;
+    padding: 30px;
+    background-color: $fourth-text-color;
+    width: 300px;
+    height: 166px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, translate 0.3s ease;
+
+    @media (max-width: #{$desktop-min-width - 1px}) {
+      width: 100%;
+    }
+
+    @media (max-width: #{$tablet-min-width - 1px}) {
+      padding: 15px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      translate: 0 -10%;
+    }
+
+    &--number {
+      font-family: $second-font;
+      font-weight: 900;
+      font-size: 80px;
+      line-height: 70px;
+      align-items: center;
+      color: $second-text-color;
+    }
+
+    &--icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    &--elements {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &--text {
+      margin-top: 10px;
+      font-family: $main-font;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 34px;
+
+      @media (max-width: #{$desktop-min-width - 1px}) {
+        padding: 20px;
+      }
+
+      @media (max-width: #{$tablet-min-width - 1px}) {
+        padding: 0px;
+      }
+    }
+  }
+}
